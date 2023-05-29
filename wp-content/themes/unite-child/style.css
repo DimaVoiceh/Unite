@@ -1,0 +1,51 @@
+/*
+Theme Name: Unite Child
+Template: unite
+*/
+
+/* импортируем стили родительской темы */
+@import url("../unite/style.css");
+
+.buildings-wrap {
+    transition: all 0.3s ease 0s;
+    position: relative;
+    min-height: 200px;
+}
+
+.buildings-wrap::before {
+    content: url("data:image/svg+xml,%3Csvg class='preloader'  height='20' viewBox='0 0 120 30' xmlns='http://www.w3.org/2000/svg' fill='%2354397E'%3E%3Ccircle cx='15' cy='15' r='15'%3E%3Canimate attributeName='r' from='15' to='15' begin='0s' dur='0.8s' values='15;9;15' calcMode='linear' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='fill-opacity' from='1' to='1' begin='0s' dur='0.8s' values='1;.5;1' calcMode='linear' repeatCount='indefinite'%3E%3C/animate%3E%3C/circle%3E%3Ccircle cx='60' cy='15' r='9' fill-opacity='0.3'%3E%3Canimate attributeName='r' from='9' to='9' begin='0s' dur='0.8s' values='9;15;9' calcMode='linear' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='fill-opacity' from='0.5' to='0.5' begin='0s' dur='0.8s' values='.5;1;.5' calcMode='linear' repeatCount='indefinite'%3E%3C/animate%3E%3C/circle%3E%3Ccircle cx='105' cy='15' r='15'%3E%3Canimate attributeName='r' from='15' to='15' begin='0s' dur='0.8s' values='15;9;15' calcMode='linear' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='fill-opacity' from='1' to='1' begin='0s' dur='0.8s' values='1;.5;1' calcMode='linear' repeatCount='indefinite'%3E%3C/animate%3E%3C/circle%3E%3C/svg%3E");
+    position: absolute;
+    inset: 100px auto auto 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading.buildings-wrap::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.buildings-wrap__list {
+    transition: all 0.3s ease 0s;
+}
+
+.loading.buildings-wrap .buildings-wrap__list {
+    opacity: 0.5;
+}
+
+
+
+.agency-filter-link {
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+
+
+.agency-filter-link.active {
+    font-weight: 700;
+    pointer-events: none;
+}
